@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
     <Button
             android:text="Toast"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_toast"
             android:layout_weight="0"
@@ -15,24 +15,25 @@
 
     <TextView
             android:text="0"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/show_count"
-            android:textSize="100sp"
+            android:textSize="200sp"
             android:textAllCaps="false"
             android:textAlignment="center"
-            android:gravity="center"
             android:background="#FDE514"
             android:textColor="@color/blue"
-            android:layout_weight="10" />
-
+            android:layout_toEndOf="@+id/button_toast"
+            android:layout_toRightOf="@id/button_toast" />
     <Button
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_count"
             android:text="Count"
             android:layout_weight="0"
             android:backgroundTint="@color/blue"
-            android:background="@color/blue" />
+            android:background="@color/blue"
+            android:layout_marginTop="0dp"
+            android:layout_below="@+id/button_toast" />
 
-</LinearLayout>
+</RelativeLayout>
